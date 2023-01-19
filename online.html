@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            
+        </style>
+    </head>
+    <body>
+        <input onchange="readFile(event)" type="file">
+            <button onclick="likeThis(event)">Like this</button>
+    </body>
+</html>
+
+<script>
+    let reader = new FileReader()
+    let date = new Date()
+    function readFile(ev){
+        console.log(ev.target.files);
+        let file = ev.target.files[0]
+        let fileDate = ev.target.files[0].lastModified
+        console.log(date.toLocaleDateString(fileDate));
+
+        reader.readAsDataURL(file)
+        console.log(reader);
+    }
+    function likeThis(pass){
+        console.log(pass.target.innerHTML);
+    }
+    fetch('https://fakestoreapi.com/products')
+            .then(res=>res.json())
+            .then(json=>console.log(json))
+    fetch('https://fakestoreapi.com/products',{
+        method: "post",
+        body: {
+            description: "This is the description",
+            image: "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+            price: 23.5,
+            category: "men's clothing",
+            title: "This is the title"
+        }
+    })
+            .then(res=>res.json())
+            .then(json=>console.log(json))
+</script>

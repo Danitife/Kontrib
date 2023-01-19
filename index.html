@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet"
+            href="https://unpkg.com/flowbite@1.6.0/dist/flowbite.min.css" />
+        <title>Document</title>
+        <style>
+            .dd{
+                height: calc(100vh - 72px);
+            }
+            .dd div{
+                margin: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded
+                dark:bg-gray-900">
+                <div class="container flex flex-wrap items-center
+                    justify-between mx-auto">
+                    <a href="#" class="flex items-center">
+                        <img
+                            src="https://www.cidersecurity.io/wp-content/uploads/2022/04/logo-image-e1670251120651.png"
+                            class="h-6 mr-3 sm:h-9" alt="Flowbite Logo" />
+                        <span class="self-center text-xl text-green-600
+                            font-semibold
+                            whitespace-nowrap dark:text-white">Kontrib</span>
+                    </a>
+                    <div class="flex md:order-2">
+                        <button onclick="signin()" type="button"
+                            class="text-white bg-blue-400
+                            hover:bg-blue-500 focus:ring-4 focus:outline-none
+                            focus:ring-blue-300 font-medium rounded-lg text-sm
+                            px-5 py-2.5 text-center mr-3 md:mr-0
+                            dark:bg-blue-600 dark:hover:bg-blue-700
+                            dark:focus:ring-blue-800">Get started</button>
+                    </div>
+                </div>
+            </nav>
+            <section class="dd w-full flex justify-center items-center
+                bg-green-300">
+                <div class="w-56">
+                    <h1 class="text-white text-5xl font-extrabold">Saving to
+                        achieve</h1>
+                    <p class="my-4">Lorem ipsum dolor sit amet consectetur,
+                        adipisicing elit. Quod laudantium magni e</p>
+                    <button onclick="signin()" class="border-2 border-white
+                        rounded-lg text-white px-6 py-4 text-xl font-bold">Get
+                        Started</button>
+                </div>
+                <div class="m-12">
+                    <img class="w-72 h-64 rounded-lg"
+                        src="http://articles.connectnigeria.com/wp-content/uploads/2022/03/money-saving-tips-1622109964.jpg"
+                        alt="">
+                </div>
+            </section>
+        </main>
+    </body>
+</html>
+
+<script src="https://unpkg.com/flowbite@1.6.0/dist/flowbite.min.js"></script>
+<script>
+    function signin(){
+        window.location.href = 'signin.html'
+    }
+</script>
